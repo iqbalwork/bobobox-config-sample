@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_details",
+  "info": {
+    "singularName": "room-detail",
+    "pluralName": "room-details",
+    "displayName": "Room Detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "iconUrl": {
+      "type": "string"
+    },
+    "thumbUrl": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "outline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "hotelType": {
+      "type": "string"
+    },
+    "capacityId": {
+      "type": "string"
+    },
+    "capacityName": {
+      "type": "string"
+    },
+    "capacityOutline": {
+      "type": "string"
+    },
+    "layoutId": {
+      "type": "string"
+    },
+    "layoutName": {
+      "type": "string"
+    },
+    "layoutOutline": {
+      "type": "string"
+    },
+    "facilities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::facility.facility",
+      "inversedBy": "room_details"
+    },
+    "additionalFacilities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::facility.facility",
+      "inversedBy": "room_details"
+    },
+    "additional_hotels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::hotel.hotel",
+      "mappedBy": "roomDetails"
+    },
+    "outline_facilities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::facility.facility",
+      "inversedBy": "room_details_outline"
+    },
+    "podTypeId": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

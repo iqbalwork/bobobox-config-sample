@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "emergency_calls",
+  "info": {
+    "singularName": "emergency-call",
+    "pluralName": "emergency-calls",
+    "displayName": "Emergency Call"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hotel": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hotel.hotel"
+    },
+    "WhatsAppNumber": {
+      "type": "string",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "string"
+    }
+  }
+}

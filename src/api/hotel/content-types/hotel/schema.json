@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotels",
+  "info": {
+    "singularName": "hotel",
+    "pluralName": "hotels",
+    "displayName": "Hotel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hotelId": {
+      "type": "integer",
+      "required": true,
+      "default": 1000,
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "hotelCategoryLabel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hotel-category-label.hotel-category-label",
+      "inversedBy": "hotels"
+    },
+    "ancillaryMenu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ancillary-menu.ancillary-menu",
+      "inversedBy": "hotel"
+    },
+    "timeZone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::time-zone.time-zone",
+      "inversedBy": "hotels"
+    },
+    "roomDetails": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::room-detail.room-detail",
+      "inversedBy": "additional_hotels"
+    }
+  }
+}

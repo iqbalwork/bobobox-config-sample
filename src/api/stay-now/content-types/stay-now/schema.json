@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "stay_nows",
+  "info": {
+    "singularName": "stay-now",
+    "pluralName": "stay-nows",
+    "displayName": "Stay Now",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "lateNight": {
+      "type": "string"
+    },
+    "lateMorning": {
+      "type": "string"
+    },
+    "nightTime": {
+      "type": "time"
+    }
+  }
+}

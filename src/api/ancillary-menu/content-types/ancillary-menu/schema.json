@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ancillary_menus",
+  "info": {
+    "singularName": "ancillary-menu",
+    "pluralName": "ancillary-menus",
+    "displayName": "Ancillary Menu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "hotel": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hotel.hotel",
+      "mappedBy": "ancillaryMenu"
+    },
+    "room_details_outline": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::room-detail.room-detail",
+      "mappedBy": "outline_facilities"
+    }
+  }
+}

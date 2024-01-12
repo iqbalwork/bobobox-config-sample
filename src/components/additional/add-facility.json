@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_additional_add_facilities",
+  "info": {
+    "displayName": "AddFacility",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "hotels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hotel.hotel"
+    },
+    "facilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::facility.facility"
+    }
+  }
+}

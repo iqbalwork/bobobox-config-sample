@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "reservation_tncs",
+  "info": {
+    "singularName": "reservation-tnc",
+    "pluralName": "reservation-tncs",
+    "displayName": "Reservation TNC"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

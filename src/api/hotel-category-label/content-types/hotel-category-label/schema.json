@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotel_category_labels",
+  "info": {
+    "singularName": "hotel-category-label",
+    "pluralName": "hotel-category-labels",
+    "displayName": "Hotel Category Label",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "hotels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hotel.hotel",
+      "mappedBy": "hotelCategoryLabel"
+    }
+  }
+}

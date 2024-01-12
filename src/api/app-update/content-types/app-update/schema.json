@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_updates",
+  "info": {
+    "singularName": "app-update",
+    "pluralName": "app-updates",
+    "displayName": "App Update",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "latestVersion": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "forceUpdate": {
+      "type": "boolean",
+      "default": true
+    },
+    "releaseNotes": {
+      "type": "text"
+    },
+    "minVersion": {
+      "type": "integer"
+    },
+    "latestVersionCode": {
+      "type": "integer"
+    }
+  }
+}
